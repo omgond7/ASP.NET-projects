@@ -1,75 +1,62 @@
-# .NET Practical
+# 🎓 .NET Full Stack Certification Journey
 
-A repository documenting my journey of learning the .NET ecosystem through hands-on coding, experiments, and practical projects.
+This repository documents my progress, daily practice, and assignments as part of the **One Month .NET Full Stack Certification Program**. This intensive training is sponsored by *One Smarter Inc., USA* and conducted by *Certifyera Consulting Services, Mumbai*.
+
+Selected based on merit, I am using this workspace to track my journey through .NET Full Stack Development, Power BI, Networking, and DevOps.
 
 ## 🎯 Goal
 
-The objective of this repository is to build a strong understanding of .NET fundamentals by writing code rather than only reading theory.
-
-## 📚 Topics Covered
-
-- C#
-- .NET CLI
-- Object-Oriented Programming
-- Exception Handling
-- Collections
-- LINQ
-- Delegates & Events
-- Generics
-- File I/O
-- Asynchronous Programming
-- Dependency Injection
-- Entity Framework Core
-- ASP.NET Core Web API
-- Authentication & Authorization
-- REST APIs
-- Testing
-- Clean Architecture
-- Design Patterns
+The objective of this repository is to build a strong, industry-ready understanding of .NET fundamentals and full-stack development through hands-on coding and daily assignments.
 
 ## 📂 Repository Structure
 
+Currently, the repository contains the following beginner-level projects:
+
 ```
 .
-├── 01-CSharp-Basics
-├── 02-OOP
-├── 03-Collections
-├── 04-LINQ
-├── 05-Async
-├── 06-FileIO
-├── 07-EntityFramework
-├── 08-WebAPI
-├── 09-Authentication
-├── 10-Testing
-└── Projects
+├── Daily_Practice/
+│   ├── July07_Basics/
+│   └── FirstConsoleApp/
+└── Daily_Assignments/
+    └── July07_Tasks/
 ```
 
 ## 🚀 Running a Project
 
+To run any of the projects in this repository:
+
 ```bash
 git clone <repository-url>
-
-cd <project-folder>
-
+cd FirstConsoleApp
 dotnet restore
-
 dotnet build
-
 dotnet run
 ```
+
+## 📚 Planned Topics to Cover
+
+As I progress, I plan to explore and add projects covering:
+
+- C# and .NET CLI basics
+- Object-Oriented Programming (OOP)
+- Exception Handling & Collections
+- LINQ, Delegates & Events
+- File I/O & Asynchronous Programming
+- Entity Framework Core
+- ASP.NET Core Web API
+- Testing (xUnit) and Clean Architecture
 
 ## 💡 Purpose
 
 This repository serves as my personal learning log where I explore concepts, build practical examples, and improve my understanding of the .NET platform.
 
-## 🛠 Tech Stack
+## 🛠 Tech Stack (Current & Planned)
 
 - C#
 - .NET SDK
 - ASP.NET Core
 - Entity Framework Core
 - SQL Server
-- xUnit
 
 ## 📖 Status
 
