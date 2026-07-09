@@ -17,7 +17,8 @@ Currently, the repository contains the following beginner-level projects:
 ├── Daily_Practice/
 │   ├── FirstConsoleApp/
 │   ├── July07_Basics/
-│   └── July08_Practice/
+│   ├── July08_Practice/
+│   └── July09_Practice/
 └── Daily_Assignments/
     ├── July07_Tasks/
     └── July08_Tasks/

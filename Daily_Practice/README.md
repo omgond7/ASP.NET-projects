@@ -25,6 +25,12 @@ Located at [July08_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_
     *   Introduction to C# Collections using generic collections (`List<string>`).
     *   Interactive choice menus to select and execute different practice demonstrations.
 
+### 📅 July 09 Practice
+Located at [July09_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July09_Practice/)
+*   **Topics Covered:**
+    *   Creating multiple classes (`Student`, `Teacher`) using auto-implemented getters and setters.
+    *   Initializing generic lists (`List<Student>` and `List<Teacher>`) and displaying custom formatted details of students and teachers.
+
 ---
 
 ## 🚀 How to Run
