@@ -34,7 +34,7 @@ class July08_Task2_LibraryBooks
         books.Remove(oldBook);
 
         // 4. Display the updated list along with the total number of books
-        Console.WriteLine("--- Updated List of Available Books ---");
+        Console.WriteLine(" Updated List of Available Books");
         foreach (string book in books)
         {
             Console.WriteLine($"- {book}");
