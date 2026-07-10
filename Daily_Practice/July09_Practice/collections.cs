@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-class Program
+class CollectionsDemo
 {
-    static void Main(string[] args)
+    public void Run()
     {
         // Initializing collections of Students and Teachers
         List<Student> studentList = new List<Student>()

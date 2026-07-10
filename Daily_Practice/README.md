@@ -31,6 +31,11 @@ Located at [July09_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_
     *   Creating multiple classes (`Student`, `Teacher`) using auto-implemented getters and setters.
     *   Initializing generic lists (`List<Student>` and `List<Teacher>`) and displaying custom formatted details of students and teachers.
 
+### 📅 July 10 Practice
+Located at [July10_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July10_Practice/)
+*   **Topics Covered:**
+    *   C# Delegates: defining custom delegates (`MessageDelegate`) and using built-in generic delegates (`Func<T1, T2, TResult>`).
+
 ---
 
 ## 🚀 How to Run

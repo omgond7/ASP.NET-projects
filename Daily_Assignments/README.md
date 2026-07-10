@@ -24,6 +24,14 @@ Located at [July08_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Ass
 
 ---
 
+### 📅 July 10 Tasks
+Located at [July10_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July10_Tasks/)
+
+*   **Employee Leave System (Tasks 1-8)** ([Program.cs](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July10_Tasks/Program.cs))
+    *   *Description:* Demonstrates abstraction, inheritance, lists, and type checking using Employee, PermanentEmployee, ContractEmployee, and LeaveRequest classes. Runs through 8 specific management tasks.
+
+---
+
 ## 🚀 How to Run
 To run any daily assignment package, navigate to the target task folder and run:
 ```bash
