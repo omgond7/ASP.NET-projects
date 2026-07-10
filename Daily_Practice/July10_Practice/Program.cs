@@ -8,7 +8,8 @@ class Program
         Console.WriteLine("July 10 Practice Menu ");
         Console.WriteLine("1. Run Delegate Demo");
         Console.WriteLine("2. Run Lambda Expression Demo");
-        Console.Write("Enter your choice 1 or 2: ");
+        Console.WriteLine("3. Linqug");
+        Console.Write("Enter your choice : ");
         
         string? choice = Console.ReadLine();
         Console.WriteLine();
@@ -22,6 +23,10 @@ class Program
         {
             LambdaExpDemo lambdaDemo = new LambdaExpDemo();
             lambdaDemo.Run();
+        }
+        else if(choice == "3"){
+            Linqeg linqDemo = new Linqeg();
+            linqDemo.Run();
         }
         else
         {
