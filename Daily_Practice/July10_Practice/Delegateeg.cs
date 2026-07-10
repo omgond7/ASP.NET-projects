@@ -13,7 +13,7 @@ class Delegateeg
         Console.WriteLine(message);
     }
 
-    static void Main()
+    public void Run()
     {
         // Built-in delegate demonstration
         Func<int, int, int> add = (a, b) => a + b;
