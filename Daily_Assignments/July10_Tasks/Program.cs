@@ -76,9 +76,9 @@ class Program
     static void Main(string[] args)
     {
         List<Employee> employees = new List<Employee>();
-        employees.Add(new PermanentEmployee(101, "Om Gond", "IT"));
+        employees.Add(new PermanentEmployee(101,"Om Gond", "IT"));
         employees.Add(new PermanentEmployee(102, "Amit", "HR"));
-        employees.Add(new ContractEmployee(103, "Rahul", "Sales"));
+        employees.Add(new ContractEmployee(103,"Rahul", "Sales"));
         employees.Add(new ContractEmployee(104, "Priya", "IT"));
 
         Console.WriteLine(" Task 2: All Employee Details");
@@ -89,9 +89,9 @@ class Program
         Console.WriteLine();
 
         List<LeaveRequest> leaveRequests = new List<LeaveRequest>();
-        leaveRequests.Add(new LeaveRequest(1, 101, 3, "Sick Leave"));
+        leaveRequests.Add(new LeaveRequest(1,101, 3, "Sick Leave"));
         leaveRequests.Add(new LeaveRequest(2, 103, 5, "Vacation"));
-        leaveRequests.Add(new LeaveRequest(3, 104, 2, "Family Emergency"));
+        leaveRequests.Add(new LeaveRequest(3,104, 2, "Family Emergency"));
 
         // Task 4: Display all leave requests
         Console.WriteLine(" Task 4: All Leave Requests");
