@@ -36,6 +36,25 @@ Located at [July10_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_
 *   **Topics Covered:**
     *   C# Delegates: defining custom delegates (`MessageDelegate`) and using built-in generic delegates (`Func<T1, T2, TResult>`).
 
+### 📅 July 11 Practice
+Located at [July11_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July11_Practice/)
+*   **Topics Covered:**
+    *   C# Class Inheritance and Polymorphism (`Employee` parent class and `Manager` subclass).
+    *   Constructor Chaining with the `base` keyword.
+    *   Practical OOP console CRUD application utilizing generic `List<Employee>` collections, error/exception safety, and console loops.
+
+### 📅 July 13 Practice
+Located at [July13_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July13_Practice/)
+*   **Topics Covered:**
+    *   SOLID Design Principles implementation.
+    *   Demonstrating Single Responsibility Principle (SRP), Open/Closed Principle (OCP), Liskov Substitution Principle (LSP), Interface Segregation Principle (ISP), and Dependency Inversion Principle (DIP) in C#.
+
+### 📅 July 15 Practice
+Located at [July15_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July15_Practice/)
+*   **Topics Covered:**
+    *   Introduction to ASP.NET Core Razor Pages application.
+    *   Configuring middlewares, static assets, page layouts (`_Layout.cshtml`), default Razor Routing, and view structures.
+
 ---
 
 ## 🚀 How to Run

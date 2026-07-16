@@ -32,6 +32,38 @@ Located at [July10_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Ass
 
 ---
 
+### 📅 July 11 Tasks
+Located at [July11_Task](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July11_Task/)
+
+*   **Student Management & Course Registration** ([Program.cs](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July11_Task/Program.cs))
+    *   *Description:* Employs OOP concepts (inheritance, abstraction, encapsulation, and polymorphism) to manage diverse student types (`Regular`, `Scholarship`, `Part-Time`) and course registrations dynamically.
+
+---
+
+### 📅 July 13 Tasks
+Located at [July13_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July13_Tasks/)
+
+*   **Shopping Cart Application** ([Program.cs](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July13_Tasks/Program.cs))
+    *   *Description:* Implements a complete checkout process including customer signup/login (with lock-out limits), product listing, cart additions, quantity updates, stock management, and automatic checkout coupon/discount adjustments.
+
+---
+
+### 📅 July 14 Tasks
+Located at [July14_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July14_Tasks/)
+
+*   **Stationery Store Management** ([Program.cs](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July14_Tasks/Program.cs))
+    *   *Description:* A structured store inventory management system featuring items CRUD, low-stock warnings, purchase tracking, multi-criteria sorting, and customized exception handling for authentication.
+
+---
+
+### 📅 July 15 Tasks
+Located at [July15_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July15_Tasks/)
+
+*   **Automobile/Vehicle Management System** ([Program.cs](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July15_Tasks/Program.cs))
+    *   *Description:* A terminal-based automotive inventory and sales solution for "Gitesh Motors" implementing vehicle addition, searching, pricing updates, deletes, and multi-tiered discount calculations.
+
+---
+
 ## 🚀 How to Run
 To run any daily assignment package, navigate to the target task folder and run:
 ```bash
