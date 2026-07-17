@@ -1,50 +1,128 @@
-# Build results
-bin/
-obj/
+##----------------------------------------------------------------------
+## Perfect .gitignore for .NET / C# projects (Visual Studio, Rider, VS Code)
+## Preventing privacy leaks (secrets, certificates, environment keys)
+## and avoiding unnecessary build/OS data from being pushed.
+##----------------------------------------------------------------------
 
-# Visual Studio
+# Build results (artifacts and compilers)
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+bld/
+
+# MSBuild / dotnet temporary and project files
+*.tmp
+*.temp
+*_wpftmp.csproj
+*.pgc
+*.pgd
+*.rsp
+!Directory.Build.rsp
+*.meta
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.iobj
+*.ipdb
+*.pch
+*.tlb
+*.tli
+*.tlh
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio (user files, cache, and options)
 .vs/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.userprefs
+mono_crash.*
 
-# Rider
+# JetBrains Rider / WebStorm
 .idea/
+*.sln.iml
 
-# VS Code
+# VS Code (settings, tasks, and history)
 .vscode/
 
-# Logs
-*.log
-
-# Test Results
-TestResults/
-
-# NuGet
+# NuGet Packages
 packages/
 *.nupkg
+project.lock.json
+project.fragment.lock.json
 
-# Environment files
-.env
-.env.*
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Coverage
+# Test Results and Code Coverage
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+*.received.*
+_Chutzpah*
+BenchmarkDotNet.Artifacts/
 coverage/
 *.coverage
 *.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+_NCrunch_*
+.NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
 
-# Publish output
+# Privacy & Security (Secrets, Credentials, and Keys)
+secrets.json
+*secrets.json
+.env
+.env.*
+*.env.local
+*.development.json
+*.pem
+*.key
+*.pfx
+*.p12
+*.cer
+*.crt
+*.der
+*.pkcs12
+*.snk
+*.pfx
+*.p12
+
+# Publish Output
 publish/
+*.[Pp]ublish.xml
+*.azurePubxml
 
-# Local database
+# Databases (Local database files)
 *.mdf
 *.ldf
+*.sdf
+*.sqlite
+*.db
 
-# Temporary files
-*.tmp
-*.temp
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
