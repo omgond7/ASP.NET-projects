@@ -93,6 +93,8 @@ secrets.json
 .env
 .env.*
 *.env.local
+appsettings.local.json
+appsettings.*.local.json
 *.development.json
 *.pem
 *.key
@@ -103,8 +105,6 @@ secrets.json
 *.der
 *.pkcs12
 *.snk
-*.pfx
-*.p12
 
 # Publish Output
 publish/

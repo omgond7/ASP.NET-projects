@@ -55,6 +55,13 @@ Located at [July15_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_
     *   Introduction to ASP.NET Core Razor Pages application.
     *   Configuring middlewares, static assets, page layouts (`_Layout.cshtml`), default Razor Routing, and view structures.
 
+### 📅 July 16 Practice
+Located at [July16_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July16_Practice/)
+*   **Topics Covered:**
+    *   ASP.NET Core MVC (Model-View-Controller) pattern basics.
+    *   Defining a model (`Student`), controller action method (`HomeController.Index()`), and passing dynamic models to Razor Views.
+    *   Binding model data to strongly-typed views (`@model List<Student>`) and rendering HTML tables dynamically.
+
 ---
 
 ## 🚀 How to Run

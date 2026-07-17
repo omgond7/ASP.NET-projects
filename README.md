@@ -22,7 +22,8 @@ Currently, the repository contains the following beginner-level projects:
 │   ├── July10_Practice/
 │   ├── July11_Practice/
 │   ├── July13_Practice/
-│   └── July15_Practice/
+│   ├── July15_Practice/
+│   └── July16_Practice/
 └── Daily_Assignments/
     ├── July07_Tasks/
     ├── July08_Tasks/
