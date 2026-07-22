@@ -4,8 +4,8 @@ namespace StationeryStoreManagement
 {
     public class Pen : StationeryItem
     {
-        public string InkColor { get; set; }
-        public string PenType { get; set; }
+        public string InkColor { get; set; } = string.Empty;
+        public string PenType { get; set; } = string.Empty;
 
         public override void DisplayDetails()
         {

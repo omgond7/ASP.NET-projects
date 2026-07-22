@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace AutomobileVehicleManagementSystem
 {
@@ -7,10 +7,10 @@ namespace AutomobileVehicleManagementSystem
         static void Main(string[] args)
         {
             Console.Write("Enter Employee Name : ");
-            string employeeName = Console.ReadLine();
+            string employeeName = Console.ReadLine() ?? "";
 
             Console.Write("Enter Employee ID : ");
-            string employeeId = Console.ReadLine();
+            string employeeId = Console.ReadLine() ?? "";
 
             Console.WriteLine();
             Console.WriteLine("Welcome " + employeeName);
@@ -22,10 +22,8 @@ namespace AutomobileVehicleManagementSystem
             do
             {
                 Console.WriteLine();
-                Console.WriteLine("==============================");
-                Console.WriteLine("*****---Gitesh MOTORS---*****");
+                Console.WriteLine("OM MOTORS");
                 Console.WriteLine("Vehicle Management System");
-                Console.WriteLine("==============================");
                 Console.WriteLine("1. Add Vehicle");
                 Console.WriteLine("2. View All Vehicles");
                 Console.WriteLine("3. Search Vehicle");

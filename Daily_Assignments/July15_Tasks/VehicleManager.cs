@@ -14,13 +14,13 @@ namespace AutomobileVehicleManagementSystem
             int id = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Vehicle Name : ");
-            string name = Console.ReadLine();
+            string name = Console.ReadLine() ?? "";
 
             Console.Write("Vehicle Type : ");
-            string type = Console.ReadLine();
+            string type = Console.ReadLine() ?? "";
 
             Console.Write("Brand : ");
-            string brand = Console.ReadLine();
+            string brand = Console.ReadLine() ?? "";
 
             Console.Write("Price : ");
             double price = Convert.ToDouble(Console.ReadLine());
@@ -41,9 +41,7 @@ namespace AutomobileVehicleManagementSystem
                 return;
             }
 
-            Console.WriteLine("--------------------------------------------------------------");
             Console.WriteLine("ID\tName\tBrand\tType\tPrice");
-            Console.WriteLine("--------------------------------------------------------------");
 
             foreach (var v in vehicles)
             {
@@ -56,7 +54,7 @@ namespace AutomobileVehicleManagementSystem
             Console.Write("Enter Vehicle ID : ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            Vehicle vehicle = vehicles.FirstOrDefault(v => v.VehicleId == id);
+            Vehicle? vehicle = vehicles.FirstOrDefault(v => v.VehicleId == id);
 
             if (vehicle != null)
             {
@@ -79,7 +77,7 @@ namespace AutomobileVehicleManagementSystem
             Console.Write("Enter Vehicle ID : ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            Vehicle vehicle = vehicles.FirstOrDefault(v => v.VehicleId == id);
+            Vehicle? vehicle = vehicles.FirstOrDefault(v => v.VehicleId == id);
 
             if (vehicle != null)
             {
@@ -99,7 +97,7 @@ namespace AutomobileVehicleManagementSystem
             Console.Write("Enter Vehicle ID : ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            Vehicle vehicle = vehicles.FirstOrDefault(v => v.VehicleId == id);
+            Vehicle? vehicle = vehicles.FirstOrDefault(v => v.VehicleId == id);
 
             if (vehicle != null)
             {
@@ -117,7 +115,7 @@ namespace AutomobileVehicleManagementSystem
             Console.Write("Enter Vehicle ID : ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            Vehicle vehicle = vehicles.FirstOrDefault(v => v.VehicleId == id);
+            Vehicle? vehicle = vehicles.FirstOrDefault(v => v.VehicleId == id);
 
             if (vehicle == null)
             {
@@ -154,7 +152,7 @@ namespace AutomobileVehicleManagementSystem
         public void ShowVehicleDetails()
         {
             Console.Write("Enter Vehicle Type : ");
-            string type = Console.ReadLine().ToLower();
+            string type = (Console.ReadLine() ?? "").ToLower();
 
             switch (type)
             {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 class Program
@@ -47,7 +47,7 @@ class Program
                         }
 
                         Console.Write("Enter Name : ");
-                        string name = Console.ReadLine();
+                        string name = Console.ReadLine() ?? "";
 
                         Console.Write("Enter Monthly Salary : ");
                         double salary = Convert.ToDouble(Console.ReadLine());
@@ -102,7 +102,7 @@ class Program
                         Console.Write("Enter Employee ID to Delete : ");
                         int deleteId = Convert.ToInt32(Console.ReadLine());
 
-                        Employee deleteEmp = null;
+                        Employee? deleteEmp = null;
 
                         foreach (Employee emp in employees)
                         {

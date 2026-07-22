@@ -5,7 +5,7 @@ namespace StationeryStoreManagement
     public class Notebook : StationeryItem
     {
         public int Pages { get; set; }
-        public string PaperType { get; set; }
+        public string PaperType { get; set; } = string.Empty;
 
         public override void DisplayDetails()
         {

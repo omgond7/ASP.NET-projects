@@ -39,7 +39,7 @@ namespace StationeryStoreManagement
                     notebook.Pages = Convert.ToInt32(Console.ReadLine());
 
                     Console.Write("Enter Paper Type: ");
-                    notebook.PaperType = Console.ReadLine();
+                    notebook.PaperType = Console.ReadLine() ?? "";
 
                     item = notebook;
                     break;
@@ -48,10 +48,10 @@ namespace StationeryStoreManagement
                     Pen pen = new Pen();
 
                     Console.Write("Enter Ink Color: ");
-                    pen.InkColor = Console.ReadLine();
+                    pen.InkColor = Console.ReadLine() ?? "";
 
                     Console.Write("Enter Pen Type: ");
-                    pen.PenType = Console.ReadLine();
+                    pen.PenType = Console.ReadLine() ?? "";
 
                     item = pen;
                     break;
@@ -79,13 +79,13 @@ namespace StationeryStoreManagement
             item.ItemId = id;
 
             Console.Write("Enter Item Name: ");
-            item.ItemName = Console.ReadLine();
+            item.ItemName = Console.ReadLine() ?? "";
 
             Console.Write("Enter Category: ");
-            item.Category = Console.ReadLine();
+            item.Category = Console.ReadLine() ?? "";
 
             Console.Write("Enter Brand: ");
-            item.Brand = Console.ReadLine();
+            item.Brand = Console.ReadLine() ?? "";
 
             Console.Write("Enter Price: ");
             item.Price = Convert.ToDouble(Console.ReadLine());
@@ -125,7 +125,7 @@ namespace StationeryStoreManagement
 
     int choice = Convert.ToInt32(Console.ReadLine());
 
-    StationeryItem item = null;
+    StationeryItem? item = null;
 
     switch (choice)
     {
@@ -138,10 +138,10 @@ namespace StationeryStoreManagement
 
         case 2:
             Console.Write("Enter Item Name: ");
-            string name = Console.ReadLine();
+            string? name = Console.ReadLine();
 
             item = items.FirstOrDefault(i =>
-                i.ItemName.Equals(name, StringComparison.OrdinalIgnoreCase));
+                string.Equals(i.ItemName, name, StringComparison.OrdinalIgnoreCase));
             break;
 
         default:
@@ -163,13 +163,13 @@ public void UpdateItem()
     Console.Write("Enter Item Id: ");
     int id = Convert.ToInt32(Console.ReadLine());
 
-    StationeryItem item = items.FirstOrDefault(i => i.ItemId == id);
+    StationeryItem? item = items.FirstOrDefault(i => i.ItemId == id);
 
     if (item == null)
         throw new ItemNotFoundException();
 
     Console.Write("Enter New Brand: ");
-    item.Brand = Console.ReadLine();
+    item.Brand = Console.ReadLine() ?? "";
 
     Console.Write("Enter New Price: ");
     item.Price = Convert.ToDouble(Console.ReadLine());
@@ -187,15 +187,15 @@ public void UpdateItem()
             Console.Write("Enter Item Id: ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            StationeryItem item = items.FirstOrDefault(i => i.ItemId == id);
+            StationeryItem? item = items.FirstOrDefault(i => i.ItemId == id);
 
             if (item == null)
                 throw new ItemNotFoundException();
 
             Console.Write("Delete this item? (Y/N): ");
-            string choice = Console.ReadLine();
+            string? choice = Console.ReadLine();
 
-            if (choice.Equals("Y", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(choice, "Y", StringComparison.OrdinalIgnoreCase))
             {
                 items.Remove(item);
                 Console.WriteLine("Item Deleted Successfully.");
@@ -213,7 +213,7 @@ public void UpdateItem()
             Console.Write("Enter Item Id: ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            StationeryItem item = items.FirstOrDefault(i => i.ItemId == id);
+            StationeryItem? item = items.FirstOrDefault(i => i.ItemId == id);
 
             if (item == null)
                 throw new ItemNotFoundException();

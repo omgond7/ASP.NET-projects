@@ -11,6 +11,13 @@ Located at [FirstConsoleApp](file:///Users/omgond/Projects/DotnetTutorial/Daily_
     *   Console input/output operations (`Console.WriteLine`, `Console.ReadLine`).
     *   Entry point configuration.
 
+### 📅 July 06 Practice
+Located at [July06_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July06_Practice/)
+*   **Topics Covered:**
+    *   Basic C# entry point (`Main(string[] args)`).
+    *   Using `Console.WriteLine` for standard output.
+    *   Instantiating classes and invoking methods.
+
 ### 📅 July 07 Basics
 Located at [July07_Basics](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July07_Basics/)
 *   **Topics Covered:**
@@ -61,6 +68,13 @@ Located at [July16_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_
     *   ASP.NET Core MVC (Model-View-Controller) pattern basics.
     *   Defining a model (`Student`), controller action method (`HomeController.Index()`), and passing dynamic models to Razor Views.
     *   Binding model data to strongly-typed views (`@model List<Student>`) and rendering HTML tables dynamically.
+
+### 📅 July 21 Practice
+Located at [July21_Practice](file:///Users/omgond/Projects/DotnetTutorial/Daily_Practice/July21_Practice/)
+*   **Topics Covered:**
+    *   ASP.NET Core MVC Form Validation using Data Annotations (like `[Required]`, `[StringLength]`, `[Range]`, `[EmailAddress]`).
+    *   Binding user input to a model (`Student`) and handling POST request validation state using `ModelState.IsValid`.
+    *   Data passing between controller actions using `TempData`.
 
 ---
 

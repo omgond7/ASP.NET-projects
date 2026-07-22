@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -30,7 +30,7 @@ namespace ShoppingAssignment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("========== CUSTOMER REGISTRATION ==========");
+            Console.WriteLine("CUSTOMER REGISTRATION");
 
             Customer customer = new Customer();
 
@@ -48,7 +48,7 @@ namespace ShoppingAssignment
 
             Console.WriteLine("\nRegistration Successful");
 
-            Console.WriteLine("\n========== CUSTOMER LOGIN ==========");
+            Console.WriteLine("\nCUSTOMER LOGIN");
 
             bool loginSuccess = false;
 
@@ -78,7 +78,7 @@ namespace ShoppingAssignment
                 return;
             }
 
-            Console.WriteLine("\n========== PRODUCT ENTRY ==========");
+            Console.WriteLine("\nPRODUCT ENTRY");
 
             List<Product> products = new List<Product>();
 
@@ -106,23 +106,22 @@ namespace ShoppingAssignment
                 products.Add(p);
             }
 
-            Console.WriteLine("\n========== PRODUCT LIST ==========");
+            Console.WriteLine("\nPRODUCT LIST");
 
             foreach (Product p in products)
             {
-                Console.WriteLine("--------------------------------");
                 Console.WriteLine("Product ID   : " + p.ProductId);
                 Console.WriteLine("Product Name : " + p.ProductName);
                 Console.WriteLine("Price        : " + p.Price);
                 Console.WriteLine("Stock        : " + p.Stock);
             }
 
-            Console.WriteLine("\n========== SEARCH PRODUCT ==========");
+            Console.WriteLine("\nSEARCH PRODUCT");
 
             Console.Write("Enter product name to search: ");
             string? searchName = Console.ReadLine();
 
-            Product? searchProduct = products.Find(x => x.ProductName.Equals(searchName, StringComparison.OrdinalIgnoreCase));
+            Product? searchProduct = products.Find(x => string.Equals(x.ProductName, searchName, StringComparison.OrdinalIgnoreCase));
 
             if (searchProduct != null)
             {
@@ -137,7 +136,7 @@ namespace ShoppingAssignment
                 Console.WriteLine("Product Not Found");
             }
 
-            Console.WriteLine("\n========== SHOPPING CART ==========");
+            Console.WriteLine("\nSHOPPING CART");
 
             List<CartItem> cart = new List<CartItem>();
 
@@ -168,7 +167,7 @@ namespace ShoppingAssignment
                     {
                         selected.Stock -= qty;
 
-                        CartItem? item = cart.Find(x => x.Product.ProductId == pid);
+                        CartItem? item = cart.Find(x => x.Product?.ProductId == pid);
 
                         if (item == null)
                         {
@@ -201,14 +200,14 @@ namespace ShoppingAssignment
                     break;
             }
 
-            Console.WriteLine("\n========== CART ==========");
+            Console.WriteLine("\nCART");
 
             double total = 0;
 
             foreach (CartItem item in cart)
             {
-                Console.WriteLine($"{item.Product.ProductName} x{item.Quantity}");
-                total += item.Product.Price * item.Quantity;
+                Console.WriteLine($"{(item.Product?.ProductName ?? "Unknown")} x{item.Quantity}");
+                total += (item.Product?.Price ?? 0) * item.Quantity;
             }
 
             double discount = 0;
@@ -228,12 +227,12 @@ namespace ShoppingAssignment
 
             double finalAmount = total - discount;
 
-            Console.WriteLine("\n========== BILL ==========");
+            Console.WriteLine("\nBILL");
             Console.WriteLine("Total Amount : " + total);
             Console.WriteLine("Discount     : " + discount);
             Console.WriteLine("Final Amount : " + finalAmount);
 
-            Console.WriteLine("\n========== PAYMENT ==========");
+            Console.WriteLine("\nPAYMENT");
 
             Console.WriteLine("1. UPI");
             Console.WriteLine("2. Credit Card");

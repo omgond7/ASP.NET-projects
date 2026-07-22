@@ -5,11 +5,11 @@ namespace StationeryStoreManagement
     public class StationeryItem : Product
     {
         private int itemId;
-        private string itemName;
-        private string category;
+        private string itemName = string.Empty;
+        private string category = string.Empty;
         private double price;
         private int quantity;
-        private string brand;
+        private string brand = string.Empty;
 
         public int ItemId
         {

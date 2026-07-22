@@ -1,0 +1,39 @@
+@model List<Employee>
+@{
+    ViewData["Title"] = "Employee Portal";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-4 text-primary">Employee Management System</h1>
+    <p class="lead text-muted">A directory of all registered organization employees.</p>
+</div>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped mb-0 align-middle">
+                <thead class="table-primary text-uppercase font-monospace fs-7">
+                    <tr>
+                        <th class="px-4 py-3">Employee ID</th>
+                        <th class="py-3">Name</th>
+                        <th class="py-3">Department</th>
+                        <th class="py-3 text-end">Salary</th>
+                        <th class="px-4 py-3">Email Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var emp in Model)
+                    {
+                        <tr>
+                            <td class="px-4 py-3 fw-bold text-secondary">#@emp.EmployeeId</td>
+                            <td class="py-3 fw-semibold">@emp.Name</td>
+                            <td class="py-3"><span class="badge bg-info-subtle text-info border border-info-subtle px-2.5 py-1 rounded-pill fs-7">@emp.Department</span></td>
+                            <td class="py-3 text-end fw-medium text-success">@emp.Salary.ToString("C0")</td>
+                            <td class="px-4 py-3 text-muted">@emp.Email</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+@model List<Department>
+@{
+    ViewData["Title"] = "Department Portal";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-4 text-primary">Department Management Portal</h1>
+    <p class="lead text-muted">List of departments, heads, and contact info.</p>
+</div>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped mb-0 align-middle">
+                <thead class="table-primary text-uppercase font-monospace fs-7">
+                    <tr>
+                        <th class="px-4 py-3">Department Name</th>
+                        <th class="py-3">Department Head</th>
+                        <th class="py-3">Head Contact</th>
+                        <th class="px-4 py-3">Head Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dept in Model)
+                    {
+                        <tr>
+                            <td class="px-4 py-3 fw-bold text-secondary">@dept.Name</td>
+                            <td class="py-3 fw-semibold">@dept.DepartmentHead</td>
+                            <td class="py-3">@dept.HeadContact</td>
+                            <td class="px-4 py-3 text-muted">@dept.HeadEmail</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -24,6 +24,14 @@ Located at [July08_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Ass
 
 ---
 
+### 📅 July 09 Task
+Located at [July09_Task](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July09_Task/)
+
+*   **Employee Leave System (Multi-file)**:
+    *   *Description:* An object-oriented system modeling `Employee`, `PermanentEmployee`, `ContractEmployee`, and `LeaveRequest` across separate files to demonstrate polymorphism, abstract classes, and collection management.
+
+---
+
 ### 📅 July 10 Tasks
 Located at [July10_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July10_Tasks/)
 
@@ -61,6 +69,22 @@ Located at [July15_Tasks](file:///Users/omgond/Projects/DotnetTutorial/Daily_Ass
 
 *   **Automobile/Vehicle Management System** ([Program.cs](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July15_Tasks/Program.cs))
     *   *Description:* A terminal-based automotive inventory and sales solution for "Gitesh Motors" implementing vehicle addition, searching, pricing updates, deletes, and multi-tiered discount calculations.
+
+---
+
+### 📅 July 16 Task
+Located at [July16_Task](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July16_Task/)
+
+*   **Employee & Department Management System (MVC)**:
+    *   *Description:* An ASP.NET Core MVC application managing both Employee and Department listings. Features separate models, controllers, and strongly-typed view pages rendering layout-integrated data in stylized Bootstrap tables.
+
+---
+
+### 📅 July 17 Task
+Located at [July17_Task](file:///Users/omgond/Projects/DotnetTutorial/Daily_Assignments/July17_Task/)
+
+*   **ShopEase Console App (Multi-file)**:
+    *   *Description:* A comprehensive console-based shopping management platform featuring admin-level management (product CRUD, category management, reports) and customer flows (registration/login, browsing products, shopping cart, apply coupon, checkout/payment/invoicing).
 
 ---
 
