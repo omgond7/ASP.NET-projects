@@ -1,0 +1,86 @@
+@model July21_Task.Models.Employee
+@{
+    ViewData["Title"] = "Employee Registration";
+}
+
+<meta name="description" content="Register new employees with validate data checks in the Employee Management System." />
+
+<div class="glass-container">
+    <div class="form-header">
+        <h1>Employee Registration</h1>
+        <p class="subtitle">Join the organization by completing the profile below</p>
+    </div>
+
+    @if (TempData["WarningMessage"] != null)
+    {
+        <div class="alert alert-warning" role="alert" id="reg-warning-alert">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-text">@TempData["WarningMessage"]</span>
+        </div>
+    }
+
+    <form asp-controller="Employee" asp-action="Register" method="post" id="employee-register-form" class="custom-form">
+        @Html.AntiForgeryToken()
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="EmployeeId" class="form-control" placeholder="e.g. EMP-1024" id="input-emp-id" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="EmployeeId" class="text-danger" id="val-emp-id"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EmployeeName" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="EmployeeName" class="form-control" placeholder="Enter full name" id="input-emp-name" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="EmployeeName" class="text-danger" id="val-emp-name"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Department" class="form-label"></label>
+                <div class="input-wrapper">
+                    <select asp-for="Department" asp-items="ViewBag.Departments" class="form-control form-select" id="input-emp-dept">
+                        <option value="">-- Select Department --</option>
+                    </select>
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="Department" class="text-danger" id="val-emp-dept"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Salary" class="form-label"></label>
+                <div class="input-wrapper prefix-wrapper">
+                    <span class="input-prefix">$</span>
+                    <input asp-for="Salary" class="form-control" placeholder="0.00" type="number" step="0.01" id="input-emp-salary" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="Salary" class="text-danger" id="val-emp-salary"></span>
+            </div>
+
+            <div class="form-group full-width">
+                <label asp-for="Email" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="Email" class="form-control" placeholder="employee@company.com" type="email" id="input-emp-email" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="Email" class="text-danger" id="val-emp-email"></span>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <button type="submit" class="btn btn-primary" id="btn-register-employee">
+                <span>Register Employee</span>
+                <span class="btn-shine"></span>
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

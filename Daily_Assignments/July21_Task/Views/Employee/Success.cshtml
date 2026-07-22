@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Registration Successful";
+    var employeeName = TempData.Peek("EmployeeName")?.ToString() ?? "N/A";
+    var department = TempData.Peek("EmployeeDept")?.ToString() ?? "N/A";
+}
+
+<div class="glass-container success-container">
+    <div class="success-icon-wrapper">
+        <div class="success-checkmark">
+            <div class="checkmark-circle"></div>
+            <div class="checkmark-stem"></div>
+            <div class="checkmark-kick"></div>
+        </div>
+    </div>
+
+    <div class="form-header">
+        <h1 class="success-title">Employee Added Successfully</h1>
+        <p class="subtitle">The employee has been registered and verified in our database.</p>
+    </div>
+
+    <div class="data-preview-card" id="success-preview-card">
+        <h3 class="preview-card-header">Employee Profile Summary</h3>
+        <div class="preview-item">
+            <span class="preview-label">Name:</span>
+            <span class="preview-value" id="preview-emp-name">@employeeName</span>
+        </div>
+        <div class="preview-divider"></div>
+        <div class="preview-item">
+            <span class="preview-label">Assigned Department:</span>
+            <span class="preview-value badge-dept" id="preview-emp-dept">@department</span>
+        </div>
+    </div>
+
+    <div class="form-footer flex-center-columns">
+        <a asp-controller="Department" asp-action="Details" class="btn btn-primary" id="btn-view-dept-details">
+            <span>View Department Details</span>
+            <span class="btn-shine"></span>
+        </a>
+        
+        <a asp-controller="Employee" asp-action="Register" class="btn btn-secondary" id="btn-register-another">
+            Register Another Employee
+        </a>
+    </div>
+</div>

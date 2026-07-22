@@ -1,0 +1,120 @@
+@model July22_Task.Models.Automobile
+@{
+    ViewData["Title"] = "Automobile Registration";
+    var showSuccess = ViewBag.ShowSuccess as bool? ?? false;
+    var successMsg = ViewBag.SuccessMessage as string ?? "";
+    var regVehicle = TempData.Peek("RegisteredVehicleName")?.ToString() ?? "";
+    var regBrand = TempData.Peek("RegisteredBrand")?.ToString() ?? "";
+}
+
+<meta name="description" content="Register vehicles in the Automobile Management System with real-time feedback." />
+
+<div class="glass-container">
+    <div class="form-header">
+        <h1>Automobile Registration</h1>
+        <p class="subtitle">Enter the specifications for the new inventory model</p>
+    </div>
+
+    @if (TempData["WarningMessage"] != null)
+    {
+        <div class="alert alert-warning" role="alert" id="auto-warning-alert">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-text">@TempData["WarningMessage"]</span>
+        </div>
+    }
+
+    @if (showSuccess)
+    {
+        <div class="alert alert-success-custom" role="alert" id="auto-success-alert">
+            <div class="success-alert-header">
+                <span class="alert-icon">🎉</span>
+                <strong class="alert-title">@successMsg</strong>
+            </div>
+            <div class="success-alert-body">
+                <p><strong>Vehicle Name:</strong> @regVehicle</p>
+                <p><strong>Brand / Manufacturer:</strong> @regBrand</p>
+                <hr class="alert-divider" />
+                <div class="flex-center-columns">
+                    <a asp-controller="Manufacturer" asp-action="Register" class="btn btn-primary btn-gold" id="btn-proceed-mfg">
+                        <span>Register Manufacturer Details</span>
+                        <span class="btn-shine"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+    <form asp-controller="Automobile" asp-action="Register" method="post" id="automobile-register-form" class="custom-form">
+        @Html.AntiForgeryToken()
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label asp-for="VehicleId" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="VehicleId" class="form-control" placeholder="e.g. ABC-123" id="input-vehicle-id" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="VehicleId" class="text-danger" id="val-vehicle-id"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="VehicleName" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="VehicleName" class="form-control" placeholder="e.g. Model S" id="input-vehicle-name" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="VehicleName" class="text-danger" id="val-vehicle-name"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Brand" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="Brand" class="form-control" placeholder="e.g. Tesla" id="input-vehicle-brand" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="Brand" class="text-danger" id="val-vehicle-brand"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ModelYear" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="ModelYear" class="form-control" placeholder="e.g. 2024" type="number" id="input-vehicle-year" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="ModelYear" class="text-danger" id="val-vehicle-year"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Price" class="form-label"></label>
+                <div class="input-wrapper prefix-wrapper">
+                    <span class="input-prefix">$</span>
+                    <input asp-for="Price" class="form-control" placeholder="0.00" type="number" step="0.01" id="input-vehicle-price" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="Price" class="text-danger" id="val-vehicle-price"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FuelType" class="form-label"></label>
+                <div class="input-wrapper">
+                    <select asp-for="FuelType" asp-items="ViewBag.FuelTypes" class="form-control form-select" id="input-vehicle-fuel">
+                        <option value="">-- Select Fuel --</option>
+                    </select>
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="FuelType" class="text-danger" id="val-vehicle-fuel"></span>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <button type="submit" class="btn btn-primary btn-gold" id="btn-register-automobile">
+                <span>Register Vehicle</span>
+                <span class="btn-shine"></span>
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

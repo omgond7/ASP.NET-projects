@@ -1,0 +1,69 @@
+@model July22_Task.Models.Manufacturer
+@{
+    ViewData["Title"] = "Manufacturer Registration";
+}
+
+<meta name="description" content="Register vehicle manufacturers in the Automobile Management System." />
+
+<div class="glass-container">
+    <div class="form-header">
+        <h1>Manufacturer Registration</h1>
+        <p class="subtitle">Complete the profile of the automaker brand</p>
+    </div>
+
+    <form asp-controller="Manufacturer" asp-action="Register" method="post" id="manufacturer-register-form" class="custom-form">
+        @Html.AntiForgeryToken()
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label asp-for="ManufacturerName" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="ManufacturerName" class="form-control" placeholder="e.g. Tesla Inc." id="input-mfg-name" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="ManufacturerName" class="text-danger" id="val-mfg-name"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Country" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="Country" class="form-control" placeholder="e.g. United States" id="input-mfg-country" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="Country" class="text-danger" id="val-mfg-country"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ContactNumber" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="ContactNumber" class="form-control" placeholder="e.g. +15551234567" id="input-mfg-phone" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="ContactNumber" class="text-danger" id="val-mfg-phone"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EmailAddress" class="form-label"></label>
+                <div class="input-wrapper">
+                    <input asp-for="EmailAddress" class="form-control" placeholder="e.g. contact@tesla.com" type="email" id="input-mfg-email" />
+                    <span class="input-focus-line"></span>
+                </div>
+                <span asp-validation-for="EmailAddress" class="text-danger" id="val-mfg-email"></span>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <a asp-controller="Automobile" asp-action="Register" class="btn btn-secondary" id="btn-back-to-auto">
+                Back to Vehicle
+            </a>
+            <button type="submit" class="btn btn-primary btn-gold" id="btn-register-mfg">
+                <span>Save Manufacturer</span>
+                <span class="btn-shine"></span>
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

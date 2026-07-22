@@ -1,0 +1,57 @@
+@model July21_Task.Models.Department
+@{
+    ViewData["Title"] = "Department Details";
+    var validationStatus = ViewBag.ValidationStatus as string ?? "";
+}
+
+<div class="glass-container table-container">
+    <div class="form-header">
+        <h1>Department Information</h1>
+        <p class="subtitle">Accessing department oversight details for registered employee</p>
+    </div>
+
+    @if (!string.IsNullOrEmpty(validationStatus))
+    {
+        <div class="alert alert-info" role="alert" id="dept-validation-alert">
+            <span class="alert-icon">ℹ️</span>
+            <span class="alert-text">@validationStatus</span>
+        </div>
+    }
+
+    <div class="custom-table-wrapper">
+        <table class="custom-table" id="department-details-table">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Detail Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Department Name</strong></td>
+                    <td id="table-dept-name">@Model.DepartmentName</td>
+                </tr>
+                <tr>
+                    <td><strong>Department Head</strong></td>
+                    <td id="table-dept-head">@Model.DepartmentHead</td>
+                </tr>
+                <tr>
+                    <td><strong>Head Contact Number</strong></td>
+                    <td id="table-dept-phone">@Model.HeadContactNumber</td>
+                </tr>
+                <tr>
+                    <td><strong>Head Email Address</strong></td>
+                    <td id="table-dept-email">
+                        <a href="mailto:@Model.HeadEmail" class="table-link">@Model.HeadEmail</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-footer flex-center-columns">
+        <a asp-controller="Employee" asp-action="Register" class="btn btn-secondary" id="btn-back-to-register">
+            Return to Registration
+        </a>
+    </div>
+</div>

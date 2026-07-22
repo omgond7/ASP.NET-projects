@@ -1,0 +1,50 @@
+@model July22_Task.Models.Manufacturer
+@{
+    ViewData["Title"] = "Manufacturer Details";
+}
+
+<meta name="description" content="View manufacturer information in table format after successful registration." />
+
+<div class="glass-container table-container">
+    <div class="form-header">
+        <h1>Manufacturer Information</h1>
+        <p class="subtitle">Official profile details of the registered automotive builder</p>
+    </div>
+
+    <div class="custom-table-wrapper">
+        <table class="custom-table" id="manufacturer-details-table">
+            <thead>
+                <tr>
+                    <th>Detail Field</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Manufacturer Name</strong></td>
+                    <td id="table-mfg-name">@Model.ManufacturerName</td>
+                </tr>
+                <tr>
+                    <td><strong>Country of Origin</strong></td>
+                    <td id="table-mfg-country">@Model.Country</td>
+                </tr>
+                <tr>
+                    <td><strong>Contact Number</strong></td>
+                    <td id="table-mfg-phone">@Model.ContactNumber</td>
+                </tr>
+                <tr>
+                    <td><strong>Corporate Email</strong></td>
+                    <td id="table-mfg-email">
+                        <a href="mailto:@Model.EmailAddress" class="table-link">@Model.EmailAddress</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-footer flex-center-columns">
+        <a asp-controller="Automobile" asp-action="Register" class="btn btn-secondary" id="btn-restart-flow">
+            Register Another Vehicle
+        </a>
+    </div>
+</div>
